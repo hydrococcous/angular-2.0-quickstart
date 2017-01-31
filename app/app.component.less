@@ -1,0 +1,31 @@
+@grey: #eee;
+@lightgrey: #ddd;
+@darkgrey: #607D8B;
+
+UL.documents{
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+
+  LI{
+    background-color: @grey;
+    border-radius: 4px;
+    margin: 0 0 8px 0;
+    line-height: 38px;
+    cursor: pointer;
+
+    &:hover{
+      background: @lightgrey;
+      color: @darkgrey;
+    }
+
+    SPAN.badge{
+      display: inline-block;
+      background-color: @darkgrey;
+      padding: 0 16px 0 16px;
+      color: white;
+      border-radius: 4px 0 0 4px;
+      margin-right: 8px;
+    }
+  }
+}
