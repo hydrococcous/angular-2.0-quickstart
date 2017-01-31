@@ -2,9 +2,27 @@
 <hr />
 <h2>Meine Akten</h2>
 <ul class="documents">
+  <!--
   <li *ngFor="let dokument of dokumente" (click)="onSelect(dokument)">
     <span class="badge">{{dokument.id}}</span><strong class="sign">{{dokument.aktenzeichen}}</strong> / {{dokument.name}}
   </li>
+  -->
+  <table class="documents">
+    <thead>
+      <tr>
+        <th class="badge">ID</th>
+        <th>Aktenzeichen</th>
+        <th>Dokumenten-Titel</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let dokument of dokumente" (click)="onSelect(dokument)">
+        <td class="badge">{{dokument.id}}</td>
+        <td>{{dokument.aktenzeichen}}</td>
+        <td>{{dokument.name}}</td>
+      </tr>
+    </tbody>
+  </table>
 </ul>
 <div *ngIf="selectedDoc">
   <h2>{{selectedDoc.name}}</h2>
