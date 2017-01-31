@@ -1,0 +1,25 @@
+UL.documents {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+UL.documents LI {
+  background-color: #eee;
+  border-radius: 4px;
+  margin: 0 0 8px 0;
+  line-height: 38px;
+  cursor: pointer;
+}
+UL.documents LI:hover {
+  background: #ddd;
+  color: #607D8B;
+}
+UL.documents LI SPAN.badge {
+  display: inline-block;
+  background-color: #607D8B;
+  width: 38px;
+  color: white;
+  border-radius: 4px 0 0 4px;
+  margin-right: 8px;
+  text-align: center;
+}

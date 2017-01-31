@@ -1,0 +1,20 @@
+<h1>{{title}}</h1>
+<hr />
+<h2>Meine Akten</h2>
+<ul class="documents">
+  <li *ngFor="let dokument of dokumente" (click)="onSelect(dokument)">
+    <span class="badge">{{dokument.id}}</span><strong class="sign">{{dokument.aktenzeichen}}</strong> / {{dokument.name}}
+  </li>
+</ul>
+<div *ngIf="selectedDoc">
+  <h2>{{selectedDoc.name}}</h2>
+  <div><label>ID: </label>{{selectedDoc.id}}</div>
+  <div>
+    <label>Name:</label>
+    <input type="text" value="{{selectedDoc.name}}" placeholder="name" />
+  </div>
+  <div>
+    <label>Dateien:</label>
+    {{selectedDoc.files}}
+  </div>
+</div>
