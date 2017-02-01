@@ -1,4 +1,4 @@
-export class Dokument {
+export class Dokument{
   id: number;
   aktenzeichen: string;
   name: string;
