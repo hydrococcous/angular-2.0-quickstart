@@ -1,16 +1,10 @@
 import { Component } from '@angular/core';
-
-export class Dokument {
-  id: number;
-  aktenzeichen: string;
-  name: string;
-  files: any;
-}
+import { Dokument } from './dokument';
 
 const DOKUMENTE: Dokument[] = [
   { id: 1, aktenzeichen: '99-2', name: 'Stadtratssitzung von 19.01.2016', files: ['Sizungsvorlage.docx', 'Antrag.pdf']},
   { id: 2, aktenzeichen: '24-8', name: 'Bauantrag Grubenstraße 12', files: ['Bauantrag.docx', 'Flurstück.pdf']},
-  { id: 3, aktenzeichen: '88-0', name: 'Gemeinderatsbeschluss Nr 94-112', files: ['Beschlussvorlage.docx']},
+  { id: 3, aktenzeichen: '88-0', name: 'Gemeinderatsbeschluss Nr 94-112', files: ['Beschlussvorlage.docx','Image-00239.png','Image-00240.png','Image-00241.png']},
   { id: 4, aktenzeichen: '12-0', name: 'Gemeinderatsbeschluss Nr 87-010', files: ['Beschlussvorlage.docx', 'Flyer.pdf']},
   { id: 5, aktenzeichen: '73-0', name: 'Vorlage Gemeinderatssizung vom 20.12.2014', files: ['Sizungsvorlage.docx']},
   { id: 6, aktenzeichen: '0-33', name: 'Mitgliederliste Gemeinderat Torgau', files: ['Sizungsvorlage.docx', 'Antrag.pdf']},
@@ -31,8 +25,8 @@ export class AppComponent  {
 
   title = 'Aktentasche';
   dokumente = DOKUMENTE;
-
   selectedDoc: Dokument;
+
   onSelect(dokument: Dokument): void{
     this.selectedDoc = dokument;
   }

@@ -1,12 +1,12 @@
-import {Component} from "@angular/core";
-
+import {Component, Input} from "@angular/core";
+import { Dokument } from './dokument';
 
 @Component({
   selector: 'doc-detail',
-  template: `
-        <div *ngIf="dokument">
-        {{dokument.name}}
-        </div>
-        `
+  templateUrl: './app/doc-detail.component.html'
+
 })
-export class DocDetailComponent{}
+export class DocDetailComponent{
+  @Input()
+  dokument: Dokument;
+}
