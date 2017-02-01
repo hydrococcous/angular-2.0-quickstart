@@ -1,32 +1,12 @@
-import {Component, OnInit} from '@angular/core';
-import { Dokument } from './dokument';
-import { DocumentsService } from './document.service'
+import { Component } from '@angular/core'
 
 @Component({
   selector: 'my-app',
-  styleUrls: ['./app/app.component.css'],
-  templateUrl: './app/app.component.html',
-  providers: [DocumentsService]
+  template: `
+    <h1>{{title}}</h1>
+    <my-documents></my-documents>
+    `
 })
-export class AppComponent implements OnInit{
-
+export class AppComponent{
   title = 'Aktentasche';
-  dokumente: Dokument[];
-  selectedDoc: Dokument;
-
-  constructor(private documentService: DocumentsService){}
-
-  getDocuments(): void {
-    this.documentService.getDocuments().then(dokumente => this.dokumente = dokumente)
-  }
-
-  ngOnInit(): void {
-    this.getDocuments();
-  }
-
-  onSelect(dokument: Dokument): void{
-    this.selectedDoc = dokument;
-  }
-
-
 }
