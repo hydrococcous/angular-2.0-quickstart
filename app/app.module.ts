@@ -8,6 +8,7 @@ import { AppComponent }  from './app.component';
 import { DocDetailComponent } from "./doc-detail.component";
 import {DocumentsComponent} from "./documents.component";
 import {DocumentsService} from "./document.service";
+import {DashboardComponent} from "./dashboard.component";
 
 @NgModule({
   imports: [
@@ -15,13 +16,15 @@ import {DocumentsService} from "./document.service";
     FormsModule,
     RouterModule.forRoot([
       { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
-      { path: 'documents', component: DocumentsComponent }
+      { path: 'documents', component: DocumentsComponent },
+      { path: 'dashboard', component: DashboardComponent }
     ])
   ],
   declarations: [
     AppComponent,
     DocDetailComponent,
-    DocumentsComponent
+    DocumentsComponent,
+    DashboardComponent
   ],
   bootstrap:    [ AppComponent ],
   providers:[
