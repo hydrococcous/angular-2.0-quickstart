@@ -2,6 +2,7 @@
 @lightgrey: #ddd;
 @darkgrey: #607D8B;
 
+
 UL.documents{
   list-style-type: none;
   margin: 0;
@@ -14,7 +15,8 @@ UL.documents{
     line-height: 38px;
     cursor: pointer;
 
-    &:hover{
+    &:hover,
+    &.selected{
       background: @lightgrey;
       color: @darkgrey;
     }
@@ -57,6 +59,7 @@ TABLE.documents{
       color: white;
       text-align: center;
       border-radius: 4px 0 0 4px;
+      width: auto;
     }
   }
 

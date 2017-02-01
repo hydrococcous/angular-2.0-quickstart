@@ -10,7 +10,8 @@ UL.documents LI {
   line-height: 38px;
   cursor: pointer;
 }
-UL.documents LI:hover {
+UL.documents LI:hover,
+UL.documents LI.selected {
   background: #ddd;
   color: #607D8B;
 }
@@ -47,6 +48,7 @@ TABLE.documents TD.badge {
   color: white;
   text-align: center;
   border-radius: 4px 0 0 4px;
+  width: auto;
 }
 TABLE.documents TBODY TR:hover TD {
   background: #eee;
