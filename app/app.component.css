@@ -24,38 +24,3 @@ UL.documents LI SPAN.badge {
   margin-right: 8px;
   text-align: center;
 }
-TABLE.documents {
-  width: 100%;
-  border-collapse: separate;
-  border-spacing: 0 8px;
-}
-TABLE.documents TD,
-TABLE.documents TH {
-  padding: 0 8px;
-}
-TABLE.documents TH {
-  text-align: left;
-}
-TABLE.documents TH.badge {
-  text-align: center;
-}
-TABLE.documents TD {
-  background-color: #ddd;
-  line-height: 38px;
-}
-TABLE.documents TD.badge {
-  background-color: #607D8B;
-  color: white;
-  text-align: center;
-  border-radius: 4px 0 0 4px;
-  width: auto;
-}
-TABLE.documents TBODY TR:hover TD {
-  background: #eee;
-  color: #607D8B;
-  cursor: pointer;
-}
-TABLE.documents TBODY TR:hover TD.badge {
-  background-color: #607D8B;
-  color: white;
-}

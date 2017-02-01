@@ -8,10 +8,15 @@ export class DocumentsService{
     return Promise.resolve(DOKUMENTE);
   }
 
-  // Testfunction
+  //TODO remove this Testfunction
   getDocumentsSlow(): Promise<Dokument[]>{
     return new Promise(resolve => {
       setTimeout(() => resolve(this.getDocuments()), 8000)
     });
+  }
+
+  getDocument(id:number): Promise<Dokument>{
+    return this.getDocuments()
+      .then(dokumente => dokumente.find(dokument => dokument.id === id));
   }
 }

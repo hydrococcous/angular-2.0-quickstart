@@ -6,7 +6,8 @@ import {DocumentsService} from "./document.service";
 @Component({
   selector: 'my-dashboard',
   templateUrl: 'templates/dashboard.component.html',
-  moduleId: module.id
+  moduleId: module.id,
+  styleUrls: ['./app.component.css']
 })
 
 export class DashboardComponent implements OnInit{
@@ -16,6 +17,7 @@ export class DashboardComponent implements OnInit{
 
   ngOnInit(): void {
     this.documentsService.getDocuments()
-      .then(dokumente => this.dokumente = dokumente.slice(1, 5));
+      .then(dokumente => this.dokumente = dokumente.slice(1, 999));
   }
 }
+

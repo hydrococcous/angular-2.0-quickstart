@@ -1,8 +1,12 @@
+<h5>Details</h5>
 <div *ngIf="dokument">
+
   <h2>{{dokument.name}} <small>({{dokument.aktenzeichen}})</small></h2>
   <ul>
     <li *ngFor="let file of dokument.files">
       <a href="#">{{file}}</a>
     </li>
   </ul>
+
+  <button (click)="goBack()">Zurück</button>
 </div>
