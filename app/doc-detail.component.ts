@@ -3,7 +3,7 @@ import { Dokument } from './dokument';
 
 @Component({
   selector: 'doc-detail',
-  templateUrl: './app/doc-detail.component.html'
+  templateUrl: './app/templates/doc-detail.component.html'
 
 })
 export class DocDetailComponent{
