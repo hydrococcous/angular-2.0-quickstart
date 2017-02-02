@@ -1,4 +1,6 @@
 import {Component, OnInit} from '@angular/core';
+import {Router} from "@angular/router";
+
 import { Dokument } from './dokument';
 import { DocumentsService } from './document.service'
 
@@ -14,7 +16,7 @@ export class DocumentsComponent implements OnInit{
   dokumente: Dokument[];
   selectedDoc: Dokument;
 
-  constructor(private documentService: DocumentsService){}
+  constructor(private documentService: DocumentsService, private router: Router){}
 
   getDocuments(): void {
     this.documentService.getDocuments().then(dokumente => this.dokumente = dokumente)
@@ -26,6 +28,10 @@ export class DocumentsComponent implements OnInit{
 
   onSelect(dokument: Dokument): void{
     this.selectedDoc = dokument;
+  }
+
+  gotoDetail(): void{
+  	this.router.navigate(['/detail', this.selectedDoc.id]);
   }
 
 

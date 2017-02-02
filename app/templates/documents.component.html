@@ -1,8 +1,15 @@
 <h2>Meine Akten</h2>
 <ul class="documents">
 
-  <li *ngFor="let dokument of dokumente" (click)="onSelect(dokument)" [class.selected]="dokument===selectedDoc" [routerLink]="['/detail', dokument.id]">
+  <li *ngFor="let dokument of dokumente" (click)="onSelect(dokument)" [class.selected]="dokument===selectedDoc">
     <span class="badge">{{dokument.id}}</span><strong class="sign">{{dokument.aktenzeichen}}</strong> / {{dokument.name}}
   </li>
 
 </ul>
+
+<div *ngIf="selectedDoc">
+    <h2>
+        {{selectedDoc.name | uppercase}}
+    </h2>
+    <button (click)="gotoDetail()">Zeige Details</button>
+</div>
